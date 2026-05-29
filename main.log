@@ -1,0 +1,285 @@
+2025-11-27 20:48:21,736 INFO MainProcess Parsed 20 games from /Users/samuel/PycharmProjects/python-chess/data/raw_games/TSMFTXH_games.txt
+2025-11-27 20:48:33,204 ERROR SpawnPoolWorker-3 Exception parsing pv from info: 'depth 1 seldepth 3 multipv 1 score cp 37 nodes 21 nps 1235 hashfull 0 tbhits 0 time 17 pv e2e4', position at root: rnbqkbnr/ppppp1pp/8/5P2/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,206 ERROR SpawnPoolWorker-3 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x108ab3d90>>)
+protocol: <UciProtocol (pid=25861)>
+transport: <_UnixSubprocessTransport pid=25861 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=20 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/ppppp1pp/8/5P2/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/ppppp1pp/8/5P2/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,236 ERROR SpawnPoolWorker-2 Exception parsing pv from info: 'depth 1 seldepth 3 multipv 1 score cp 37 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,236 ERROR SpawnPoolWorker-2 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x119b27770>>)
+protocol: <UciProtocol (pid=25864)>
+transport: <_UnixSubprocessTransport pid=25864 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=21 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,265 ERROR SpawnPoolWorker-8 Exception parsing pv from info: 'depth 1 seldepth 5 multipv 1 score cp 43 nodes 23 nps 23000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkbnr/pp1ppppp/8/2P5/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,266 ERROR SpawnPoolWorker-8 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x1127617f0>>)
+protocol: <UciProtocol (pid=25863)>
+transport: <_UnixSubprocessTransport pid=25863 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=20 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/pp1ppppp/8/2P5/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/pp1ppppp/8/2P5/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,343 ERROR SpawnPoolWorker-5 Exception parsing pv from info: 'depth 1 seldepth 3 multipv 1 score cp 37 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,346 ERROR SpawnPoolWorker-5 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x1075b2350>>)
+protocol: <UciProtocol (pid=25867)>
+transport: <_UnixSubprocessTransport pid=25867 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=20 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,428 ERROR SpawnPoolWorker-1 Exception parsing pv from info: 'depth 1 seldepth 5 multipv 1 score cp 43 nodes 23 nps 23000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,433 ERROR SpawnPoolWorker-7 Exception parsing pv from info: 'depth 1 seldepth 5 multipv 1 score cp 43 nodes 23 nps 23000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,429 ERROR SpawnPoolWorker-1 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x118aba5f0>>)
+protocol: <UciProtocol (pid=25865)>
+transport: <_UnixSubprocessTransport pid=25865 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=19 polling> stderr=<_UnixReadPipeTransport fd=21 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,434 ERROR SpawnPoolWorker-7 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x105ad6cf0>>)
+protocol: <UciProtocol (pid=25866)>
+transport: <_UnixSubprocessTransport pid=25866 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=20 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkb1r/pppppppp/5N2/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,458 ERROR SpawnPoolWorker-6 Exception parsing pv from info: 'depth 1 seldepth 5 multipv 1 score cp 43 nodes 23 nps 23000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkbnr/ppp1pppp/3P4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,459 ERROR SpawnPoolWorker-6 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x118b8be70>>)
+protocol: <UciProtocol (pid=25860)>
+transport: <_UnixSubprocessTransport pid=25860 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=20 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/3P4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/3P4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,504 ERROR SpawnPoolWorker-4 Exception parsing pv from info: 'depth 1 seldepth 2 multipv 1 score cp 26 nodes 20 nps 20000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 20:48:33,504 ERROR SpawnPoolWorker-4 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x109164d70>>)
+protocol: <UciProtocol (pid=25862)>
+transport: <_UnixSubprocessTransport pid=25862 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=20 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/8/3P4/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 21:17:40,473 INFO MainProcess Parsed 20 games from /Users/samuel/PycharmProjects/python-chess/data/raw_games/TSMFTXH_games.txt
+2025-11-27 21:17:43,471 ERROR SpawnPoolWorker-1 Exception parsing pv from info: 'depth 1 seldepth 3 multipv 1 score cp 37 nodes 21 nps 21000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkbnr/ppppp1pp/8/5P2/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 21:17:43,471 ERROR SpawnPoolWorker-1 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x106b13d90>>)
+protocol: <UciProtocol (pid=26545)>
+transport: <_UnixSubprocessTransport pid=26545 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=19 polling> stderr=<_UnixReadPipeTransport fd=21 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/ppppp1pp/8/5P2/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/ppppp1pp/8/5P2/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 21:17:43,500 ERROR SpawnPoolWorker-2 Exception parsing pv from info: 'depth 1 seldepth 5 multipv 1 score cp 43 nodes 23 nps 23000 hashfull 0 tbhits 0 time 1 pv e2e4', position at root: rnbqkbnr/ppp1pppp/3P4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 21:17:43,501 ERROR SpawnPoolWorker-2 UciAnalysisCommand failed after returning preliminary result (<Future finished result=<chess.engine...t 0x10775bbd0>>)
+protocol: <UciProtocol (pid=26544)>
+transport: <_UnixSubprocessTransport pid=26544 running stdin=<_UnixWritePipeTransport fd=17 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=18 polling> stderr=<_UnixReadPipeTransport fd=21 polling>>
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1900, in _parse_uci_bestmove
+    move = board.push_uci(tokens[0].lower())
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3284, in push_uci
+    move = self.parse_uci(uci)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/__init__.py", line 3267, in parse_uci
+    raise IllegalMoveError(f"illegal uci: {uci!r} in {self.fen()}")
+chess.IllegalMoveError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/3P4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1294, in _line_received
+    self.line_received(line)
+    ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1738, in line_received
+    self._bestmove(remaining)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1761, in _bestmove
+    best = _parse_uci_bestmove(self.engine.board, arg)
+  File "/Users/samuel/PycharmProjects/python-chess/.venv/lib/python3.13/site-packages/chess/engine.py", line 1902, in _parse_uci_bestmove
+    raise EngineError(err)
+chess.engine.EngineError: illegal uci: 'e2e4' in rnbqkbnr/ppp1pppp/3P4/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1
+2025-11-27 22:27:08,134 INFO MainProcess Parsed 20 games from /Users/samuel/PycharmProjects/python-chess/data/raw_games/TSMFTXH_games.txt
+2025-11-27 22:27:19,361 INFO MainProcess Saved batch ending at game 2
+2025-11-27 22:27:52,557 INFO MainProcess Parsed 20 games from /Users/samuel/PycharmProjects/python-chess/data/raw_games/TSMFTXH_games.txt
+2025-11-27 22:28:32,180 INFO MainProcess Saved batch ending at game 5
+2025-11-27 22:28:59,998 INFO MainProcess Saved batch ending at game 10
+2025-11-27 22:29:00,000 INFO MainProcess Saved batch ending at game 15
+2025-11-27 22:29:00,076 INFO MainProcess Saved batch ending at game 20
+2025-11-27 22:32:53,245 INFO MainProcess Parsed 20 games from /Users/samuel/PycharmProjects/python-chess/data/raw_games/TSMFTXH_games.txt
+2025-11-27 22:32:59,899 INFO MainProcess Parsed 20 games from /Users/samuel/PycharmProjects/python-chess/data/raw_games/TSMFTXH_games.txt
+2025-11-27 22:38:21,966 INFO MainProcess Saved batch ending at game 5
+2025-11-27 22:41:14,483 INFO MainProcess Saved batch ending at game 10
+2025-11-27 22:42:49,738 INFO MainProcess Saved batch ending at game 15
+2025-11-27 22:42:49,744 INFO MainProcess Saved batch ending at game 20
